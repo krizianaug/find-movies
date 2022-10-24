@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Discover Movies Online </title>
+    <script  src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header__bg--img">
+            <div class="row">
+                <div class="header__container">
+
+                    <div class="nav">
+                        <img src="./assets/whitelogo.39850b27 (1).png" alt="" class="nav__logo">
+                        <ul class="nav__links">
+                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect"> Home </a>
+                            </li>
+                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect"> Find Movies
+                                </a> </li>
+                            <li class="nav__link "> <a href="#" class="nav__link--primary"> CONTACT </a> </li>
+                        </ul>
+                    </div>
+                    <div class="header__content">
+                        <h1 class="header__title">
+                            Browse Movies
+                        </h1>
+                        <div class="input__wrap">
+                            <input type="search" placeholder="Seach by title" class="header__input" onsearch="renderMovies()">
+                            <i class="fas fa-search"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <section id="results">
+        <div class="container">
+            <div class="row">
+                <div class="main__header">
+                    <h2> Search Results: </h2>
+
+                    <select id="filter" onchange="filterMovies()">
+                        <option value="" disabled="" selected="">Sort</option>
+                        <option value="LOW_TO_HIGH">Release Date Ascending</option>
+                        <option value="HIGH_TO_LOW">Release Date Descending</option>
+                        <option value="LOW_TO_HIGH">Title Ascending</option>
+                        <option value="HIGH_TO_LOW">Title Descending</option>
+
+                    </select>
+
+                </div>
+
+              <div class="movies__list">
+
+              </div>  
+
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
+

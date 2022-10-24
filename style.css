@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.row{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+.header__container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.nav__logo{
+    height: 40px;
+    width: 150px;
+}
+
+.nav__links{
+    display: flex;
+    align-items: center;
+       
+    
+}
+
+.nav__link{
+    list-style: none;
+    margin-left: 56px;
+    
+
+}
+
+.nav__link--anchor{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 18px;
+    
+}
+
+.link__hover-effect{
+    position: relative;
+}
+
+.link__hover-effect:after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    right: 0;
+    width: 0;
+    transition: all 400ms ease;
+    background-color: #fff;
+}
+
+.link__hover-effect:hover:after{
+    left: 0;
+   width: 100%; 
+}
+
+.nav__link--primary{
+    border-radius: 50px;
+    background-color: #fff;
+    color: #6030b1;
+    padding: 16px 40px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 350ms ease;
+}
+
+.nav__link--primary:hover{
+    background-color: #ff328f;
+    color: #fff;
+}
+
+.header__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    
+    
+}
+
+.header__title{
+    letter-spacing: .1em;
+    font-size: 45px ;
+    font-weight: 500;
+    margin-bottom: 40px;
+    z-index: 1;
+    color: #fff;
+}
+
+.input__wrap{
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.header__input{
+    
+    outline: none;
+    border: 0px solid;
+    width: 100%;
+    max-width: 800px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+    position: relative;
+    
+}
+
+.fa-search{
+    color: #6030b1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    font-size: 32px;
+    transition: all 350ms ease;
+}
+
+.fa-search:hover{
+    color: #ff328f;
+}
+
+header{
+    position: relative;
+}
+
+.header__bg--img{
+  background-image: url('./assets/tyson-moultrie-BQTHOGNHo08-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.header__bg--img:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(41,25,71,.83);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.95;
+    z-index: 0;
+
+
+}
+
+/* 
+RESULTS 
+*/
+
+.container{
+    padding: 40px 0;
+}
+
+.main__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+#filter{
+background-color: #fff;
+border-radius: 4px;
+border: 1px solid #dcdfe6;
+color: #606266;
+height: 40px;
+line-height: 40px;
+outline: none;
+padding: 0 16px;
+width: 100%;
+max-width: 220px;
+}
+
+.movies__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie__container{
+    width: 100% / 4;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 24px;
+        display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.movie__poster{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.poster__image{
+    max-height: 438px;
+    object-fit: contain;
+    object-position: left;
+    width: 100%;
+    transition: all 350ms ease;
+}
+
+.poster__image:hover{
+    transform: scale(1.05);
+}
