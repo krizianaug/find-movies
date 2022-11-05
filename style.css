@@ -9,6 +9,7 @@
 
 }
 
+
 a{
     text-decoration: none;
 }
@@ -21,7 +22,111 @@ a{
 }
 
 
+
+/* home */
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 20px;
+}
+
+.navi__link--anchor{
+    color: #0a1f44;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.link__hover-effect--dark:after{
+    background-color: #242424;
+}
+
+.nav__link--primary-home{
+    background-color: #6030b1;
+    color: #fff;
+}
+
+.nav__link--primary-home:hover{
+    background-color: #448aff;    
+}
+
+header{
+    height: calc(100vh - 100px);
+}
+
 .header__container{
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.header__title--home{
+    font-size: 56px;
+    color: #6030b1;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    animation: fade-up 650ms 600ms backwards;
+}
+
+.header__subtitle--home{
+    font-size: 30x;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #0a1f44;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fade-up 650ms 800ms backwards;
+}
+
+@keyframes fade-up{
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+.header__img--wrapper{
+    padding: 20px;
+    
+}
+
+.man__img{
+    width: 100%;
+    height: 50vh;
+}
+
+
+/*  movies */
+
+.banner__container{
     display: flex;
     flex-direction: column;
     padding: 40px 0;
@@ -71,6 +176,10 @@ a{
     right: 0;
     width: 0;
     transition: all 400ms ease;
+    
+}
+
+.link__hover-effect--white::after{
     background-color: #fff;
 }
 
@@ -81,8 +190,6 @@ a{
 
 .nav__link--primary{
     border-radius: 50px;
-    background-color: #fff;
-    color: #6030b1;
     padding: 16px 40px;
     font-size: 13px;
     font-weight: 700;
@@ -90,12 +197,20 @@ a{
     transition: all 350ms ease;
 }
 
-.nav__link--primary:hover{
-    background-color: #ff328f;
-    color: #fff;
+
+.nav__link--primary-movies{
+    background-color: #fff;
+    color: #6030b1;
+    
 }
 
-.header__content{
+.nav__link--primary-movies:hover{
+    background-color: #ff328f;
+    color: #fff;
+    
+}
+
+.banner__content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +219,7 @@ a{
     
 }
 
-.header__title{
+.banner__title{
     letter-spacing: .05em;
     font-size: 45px ;
     font-weight: 500;
@@ -121,6 +236,7 @@ a{
     overflow: hidden;
     display: flex;
     margin-bottom: 40px;
+    
 }
 
 #input{
@@ -136,6 +252,11 @@ a{
     
 }
 
+.input__animate{
+    animation: fade-up 650ms 1000ms backwards;
+}
+
+
 .fa-search{
     color: #6030b1;
     position: absolute;
@@ -150,18 +271,18 @@ a{
     color: #ff328f;
 }
 
-header{
+banner{
     position: relative;
 }
 
-.header__bg--img{
+.banner__bg--img{
   background-image: url('./assets/tyson-moultrie-BQTHOGNHo08-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   
 }
 
-.header__bg--img:before {
+.banner__bg--img:before {
     content: "";
     position: absolute;
     background-color: rgba(41,25,71,.83);
@@ -183,11 +304,16 @@ RESULTS
     padding: 40px 0;
 }
 
-.main__header{
+.results__title{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 36px;
+}
+
+body{
+    
+    background-color: #F1EBFB;
 }
 
 #filter{

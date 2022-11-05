@@ -6,73 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Discover Movies Online </title>
-    <script  src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="header__bg--img">
-            <div class="row">
-                <div class="header__container">
-
-                    <div class="nav">
-                        <img src="./assets/whitelogo.39850b27 (1).png" alt="" class="nav__logo">
-                        <ul class="nav__links">
-                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect"> Home </a>
-                            </li>
-                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect"> Movies
-                                </a> </li>
-                            <li class="nav__link "> <a href="#" class="nav__link--primary"> CONTACT </a> </li>
-                        </ul>
-                    </div>
-                    <div class="header__content">
-                        <h1 class="header__title">
-                            Browse Movies
-                        </h1>
-                        <div class="input__wrap">
-                            <input placeholder="Seach by title" id="input" onkeypress="enterPress(event)">
-                            <button id="search-button" onclick="showMovies()">
-                            <i class="fas fa-search"></i></button>
-                        </div>
-
-                    </div>
+    <section id="landing-page">
+        <nav>
+            <img src="./assets/movbox-purple.png" alt="" class="nav__logo">
+            <ul class="nav__links">
+                <li class="nav__link"> <a href="#"
+                        class="navi__link--anchor link__hover-effect--dark link__hover-effect">
+                        Home </a>
+                </li>
+                <li class="nav__link"> <a href="#"
+                        class="navi__link--anchor link__hover-effect--dark link__hover-effect">
+                        Movies
+                    </a> </li>
+                <li class="nav__link "> <a href="#" class="nav__link--primary nav__link--primary-home"> CONTACT </a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header__container">
+                <div class="header_description">
+                    <h1 class="header__title--home">
+                        Your go-to destination for <br>
+                        browsing movies online
+                    </h1>
+                    <h2 class="header__subtitle--home">
+                        Find your next movie with MovBox
+                    </h2>
                 </div>
+                <div class="input__wrap input__animate">
+                    <input placeholder="Seach by title" id="input" onkeypress="enterPress(event)">
+                    <i class="fas fa-search" onclick="showMovies()"></i>
+                </div>
+                <figure class="header__img--wrapper">
+                    <img src="./assets/undraw_home_cinema_l7yl.svg" class="man__img" alt="">
+
+                </figure>
+
             </div>
 
 
+        </header>
+
+
+        <!-- <div class="header__content">
+        <h1 class="header__title">
+            Browse Movies
+        </h1>
+        <div class="input__wrap">
+            <input placeholder="Seach by title" id="input" onkeypress="enterPress(event)">
+
+            <i class="fas fa-search" onclick="showMovies()"></i></button>
+        </div> -->
+
+        </div>
+        </div>
         </div>
 
-    </header>
 
-    <section id="results">
-        <div class="container">
-            <div class="row">
-                <div class="main__header">
-                    <h2> Search Results: </h2>
 
-                    <select id="filter" onchange="filterMovies()">
-                        <option value="" disabled="" selected="">Sort</option>
-                        <option value="DATE_LOW_TO_HIGH">Release Date Ascending</option>
-                        <option value="DATE_HIGH_TO_LOW">Release Date Descending</option>
-                        <option value="TITLE_LOW_TO_HIGH">Title Ascending</option>
-                        <option value="TITLE_HIGH_TO_LOW">Title Descending</option>
 
-                    </select>
-
-                </div>
-
-              <div class="movies__list">
-
-              </div>  
-
-            </div>
-        </div>
 
     </section>
 </body>
 
 </html>
-

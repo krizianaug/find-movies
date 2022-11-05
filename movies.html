@@ -14,29 +14,28 @@
 </head>
 
 <body>
-    <header>
-        <div class="header__bg--img">
+    <banner>
+        <div class="banner__bg--img">
             <div class="row">
-                <div class="header__container">
+                <div class="banner__container">
 
                     <div class="nav">
-                        <img src="./assets/whitelogo.39850b27 (1).png" alt="" class="nav__logo">
+                        <img src="./assets/movbox-logo.png" alt="" class="nav__logo">
                         <ul class="nav__links">
-                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect"> Home </a>
+                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--white"> Home </a>
                             </li>
-                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect"> Movies
+                            <li class="nav__link"> <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--white"> Movies
                                 </a> </li>
-                            <li class="nav__link "> <a href="#" class="nav__link--primary"> CONTACT </a> </li>
+                            <li class="nav__link "> <a href="#" class="nav__link--primary nav__link--primary-movies"> CONTACT </a> </li>
                         </ul>
                     </div>
-                    <div class="header__content">
-                        <h1 class="header__title">
+                    <div class="banner__content">
+                        <h1 class="banner__title">
                             Browse Movies
                         </h1>
                         <div class="input__wrap">
                             <input placeholder="Seach by title" id="input" onkeypress="enterPress(event)">
-                            <button id="search-button" onclick="showMovies()">
-                            <i class="fas fa-search"></i></button>
+                            <i class="fas fa-search" onclick="showMovies()"></i>
                         </div>
 
                     </div>
@@ -46,15 +45,15 @@
 
         </div>
 
-    </header>
+    </banner>
 
     <section id="results">
         <div class="container">
             <div class="row">
-                <div class="main__header">
+                <div class="results__title">
                     <h2> Search Results: </h2>
 
-                    <select id="filter" onchange="filterMovies()">
+                    <select id="filter" onchange="filterMovies(event)">
                         <option value="" disabled="" selected="">Sort</option>
                         <option value="DATE_LOW_TO_HIGH">Release Date Ascending</option>
                         <option value="DATE_HIGH_TO_LOW">Release Date Descending</option>
