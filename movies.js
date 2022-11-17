@@ -10,13 +10,22 @@ async function renderMovies(filter) {
   if (!moviesData){
     const movies = await fetch(`https://www.omdbapi.com/?apikey=788103b6&type=movie&s=${searchTerm}`)
     moviesData = await movies.json();
+
+    
   }
 
   moviesWrapper.classList.remove('movies__loading')
+  console.log(moviesData.Response)
 
-  // const movies = await fetch(`https://www.omdbapi.com/?apikey=788103b6&type=movie&s=${searchTerm}`)
-  // const moviesData = await movies.json();
-  // console.log(moviesData)
+  if (moviesData.Response === "False") {
+    noResultFound();
+  }
+  
+  
+
+  const searchResults = document.querySelector(".search-results")
+  searchResults.innerHTML = `Search Results for "${searchTerm}"`
+  
   
 
   if (filter === 'DATE_LOW_TO_HIGH') {
@@ -44,6 +53,13 @@ function filterMovies(event) {
   
 }
 
+function noResultFound(){
+  
+  const noResult = document.querySelector(".movies__list--noResult")
+  noResult.innerHTML = `<img src="./assets/undraw_warning_re_eoyh.svg" alt="No results found" class="noResult__img"> 
+  <p> Could not find any matches related to your search.</p>` 
+}
+
 
 function moviesHTML(movie) {
   return `<div class="movie__container">
@@ -60,5 +76,6 @@ function moviesHTML(movie) {
 }
 
 renderMovies();
+
 
 

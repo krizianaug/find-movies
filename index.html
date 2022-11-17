@@ -13,9 +13,13 @@
 </head>
 
 <body>
-    <section id="landing-page">
+    
+    <section id="landing">
+        
         <nav>
-            <img src="./assets/movbox-purple.png" alt="" class="nav__logo">
+
+            <a href="#">
+                <img src="./assets/movbox-purple.png" alt="" class="nav__logo"></a>
             <ul class="nav__links">
                 <li class="nav__link"> <a href="#"
                         class="navi__link--anchor link__hover-effect--dark link__hover-effect">
@@ -28,22 +32,46 @@
                 <li class="nav__link "> <a href="#" class="nav__link--primary nav__link--primary-home"> CONTACT </a>
                 </li>
             </ul>
+
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+           
+
+            <ul class="menu__links">
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Contact</a>
+                </li>
+                <li class="menu__list">
+                    <a href="#featured-books" class="menu__link ">Books</a>
+                </li>
+            </ul>
+        </div>
         </nav>
         <header>
             <div class="header__container">
                 <div class="header_description">
                     <h1 class="header__title--home">
-                        Your go-to destination for <br>
+                        Your go-to destination for
                         browsing movies online
                     </h1>
                     <h2 class="header__subtitle--home">
                         Find your next movie with MovBox
                     </h2>
+                    <div class="input__wrap input__animate">
+                        <input placeholder="Seach by title" id="input" onkeypress="enterPress(event)">
+                        <i class="fas fa-search" onclick="showMovies()"></i>
+                    </div>
                 </div>
-                <div class="input__wrap input__animate">
-                    <input placeholder="Seach by title" id="input" onkeypress="enterPress(event)">
-                    <i class="fas fa-search" onclick="showMovies()"></i>
-                </div>
+                
                 <figure class="header__img--wrapper">
                     <img src="./assets/undraw_home_cinema_l7yl.svg" class="man__img" alt="">
 
@@ -74,6 +102,7 @@
 
 
     </section>
+
 </body>
 
 </html>
