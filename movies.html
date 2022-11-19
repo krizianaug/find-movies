@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <banner>
+    <div class="banner">
         <div class="banner__bg--img">
-            <div class="row">
+           
                 <div class="banner__container">
 
-                    <div class="nav">
+                    <div class="nav__container">
                         <img src="./assets/movbox-logo.png" alt="" class="nav__logo">
                         <ul class="nav__links">
                             <li class="nav__link"> <a href="#"
@@ -31,6 +31,29 @@
                             <li class="nav__link "> <a href="#" class="nav__link--primary nav__link--primary-movies">
                                     CONTACT </a> </li>
                         </ul>
+
+                        <button class="btn__menu btn__menu--movies" onclick="openMenu()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <div class="menu__backdrop">
+                            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                                <i class="fas fa-times"></i>
+                            </button>
+
+
+                            <ul class="menu__links">
+                                <li class="menu__list">
+                                    <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                                </li>
+                                <li class="menu__list">
+                                    <a href="#" class="menu__link" onclick="closeMenu()">Contact</a>
+                                </li>
+                                <li class="menu__list">
+                                    <a href="#featured-books" class="menu__link " onclick="closeMenu()">Books</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="banner__content">
                         <h1 class="banner__title">
@@ -43,12 +66,11 @@
 
                     </div>
                 </div>
-            </div>
 
 
         </div>
-
-    </banner>
+    </div>
+    
 
     <section id="results">
         <div class="container">
