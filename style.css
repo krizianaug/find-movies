@@ -6,8 +6,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 
-
-
 }
 
 body,
@@ -17,7 +15,6 @@ html {
     background-color: #F1EBFB;
     overflow-x: hidden;
     position: relative;
-    
 
 }
 
@@ -35,11 +32,10 @@ a {
 
 #landing {
     height: 100vh;
-    
+
 }
 
 /* home */
-
 
 
 nav {
@@ -48,7 +44,7 @@ nav {
 
 }
 
-.nav__container{
+.nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,8 +146,6 @@ nav {
 }
 
 
-
-
 header {
     height: calc(100vh - 100px);
 }
@@ -165,7 +159,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    
+
 
 }
 
@@ -250,7 +244,6 @@ header {
 
 .nav__links {
     display: flex;
-   
 
 
 }
@@ -379,7 +372,7 @@ header {
 
 .banner {
     position: relative;
-    
+
 }
 
 .banner__bg--img {
@@ -529,10 +522,10 @@ RESULTS
 
     .btn__menu {
         display: block;
-        
+
     }
 
-    .btn__menu--movies{
+    .btn__menu--movies {
         color: #fff;
     }
 

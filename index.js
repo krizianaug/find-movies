@@ -1,7 +1,7 @@
 function showMovies(){
     const searchTerm = document.getElementById("input").value;
     localStorage.setItem("searchTerm", searchTerm)
-    window.location.href = `${window.location.origin}/movies.html`
+    window.location.href = `${window.location.origin}/find-movies/movies.html`
 }
 
 function enterPress(event){
